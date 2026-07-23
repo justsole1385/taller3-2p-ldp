@@ -2,15 +2,11 @@ using UnityEngine;
 
 public class Camera2D : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public Transform targetPlayer; // Arrastra aquí tu Player desde la Jerarquía
 
-    // Update is called once per frame
     void Update()
     {
-        transform.position= new Vector3(targetPlayer.position.x+6f,0,-10)
+        // Sigue al jugador en X, mantiene la Y fija y el Z en -10 (para cámara 2D)
+        transform.position = new Vector3(targetPlayer.position.x + 6f, 0, -10);
     }
 }
